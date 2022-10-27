@@ -1,0 +1,64 @@
+@import '../../config-scss/rem-calc.scss';
+
+.listagem {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .pokemon {
+    margin-top: 20px;
+    display: flex;
+    position: relative;
+    width: calc(49% - 40px);
+    height: rem-calc(157);
+    background: var(--white);
+    color: var(--´primary);
+    border-radius: 10px;
+
+    padding: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+
+    .pokemon_status {
+      h2 {
+        font-size: rem-calc(22);
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          background-color: #f2f2f2;
+          font-size: rem-calc(10);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: rem-calc(60);
+          border-radius: 5px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .pokemon_image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // margin-left: auto;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background: url('../../../assets/bg/bolinhas.svg');
+
+      img {
+        width: 80px;
+      }
+    }
+  }
+}
